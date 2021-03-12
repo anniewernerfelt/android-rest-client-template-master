@@ -93,7 +93,7 @@ public class ComposeActivity extends AppCompatActivity {
         etCompose.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                tvCharCount.setText(String.valueOf(s.length()));
+                tvCharCount.setText(String.valueOf(280-s.length()));
                 // Fires right as the text is being changed (even supplies the range of text)
             }
 
@@ -105,7 +105,7 @@ public class ComposeActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 // Fires right after the text has changed
-                tvCharCount.setText(String.valueOf(s.length()));
+                tvCharCount.setText(String.valueOf(280-s.length()));
             }
         });
     }
